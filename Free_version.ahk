@@ -1,23 +1,13 @@
 #SingleInstance Force
 #MaxThreadsPerHotkey 2
-password = f9HCwpwzHC4q
-FormatTime, CurrentDateTime,, yyMMdd
-if (currentDateTime>=200131){
-  password = SomeLongAsFuckpasswordthatnoonewillremember
-}
 x = 123
 bx = 123
 ex = 123
-speed = 75
-crafting_string := False
-Gui 1:Default
-InputBox, pass, Please enter the key:
-If (pass!=password){
-  ExitApp
-}
+speed = 400
+
 ;=============================================================================================================================================================
 Gui, Add, Tab3, x-8 y-1 w500 h300 , Info|Config|Apps|Settings
-Gui, Show, w500 h300, Diggy's Skyblock Helper Premium
+Gui, Show, w500 h300, Diggy's Skyblock Helper FREE
 Gui, Tab, 4
 Gui, Add, Text,y280 x450, ver 0.5
 Gui, Add, Button, default x10 y35, AutoCraft
@@ -26,19 +16,20 @@ Gui, Add, Button, default x10 y85, Fast Crafter
 
 Gui, Tab, 3
 Gui, Add, Button, default x10 y60, AutoSize (1280 x 720)
-Gui, Add, Text,y280 x450, ver 1.6
+Gui, Add, Text,y280 x450, ver 0.5
 
 
 Gui, Tab, 1
-Gui, Add, Text,y280 x350, Premium Version 1.7
-Gui, Add, Text,y35 x10, Welcome to the premium Skyblock Helper!    
-Gui, Add, Text,y55 x10, To get started head over to the config tab and select your slot, and backpack/ender chest size and if you are doing string.
+Gui, Add, Text,y280 x350, Free V .6
+Gui, Add, Text,y35 x10, Welcome to the Free Skyblock Helper!    
+Gui, Add, Text,y55 x10, To get started head over to the config tab and select your slot, and backpack/ender chest size. 
 Gui, Add, Text,y75 x10, Then go to the Apps page and press the AutoSize button.
 Gui, Add, Text,y100 x10, Afterwards head to the Settings tab and select your helper option.
 Gui, Add, Text,y115 x10, Head over to an NPC and press "5" to start
 Gui, Add, Text,y130 x10, Press "F8" To pause the script. Press "F9" to end the script
 Gui, Add, Text,y280 x10, Credits: @Ryandigzz @Noosh
-
+Gui, Add, Text,y145 x10, To unlock full features to include LARGE and GREATEST backpack, fast speeds, and all slots go to:
+Gui, Add, Text,y160 x10, https://shoppy.gg/@Ryandigzz
 Gui, Tab, 2
 Gui, Add, Text, y35 x10, Item to buy:
 Gui, Add, Button, default y50 x10, Slot_1
@@ -46,32 +37,14 @@ Gui, Add, Button, default y50 x65, Slot_2
 Gui, Add, Button, default y50 x120, Slot_3
 Gui, Add, Button, default y50 x175, Slot_4
 Gui, Add, Button, default y50 x230, Slot_5
-Gui, Add, Button, default y50 x285, Slot_6
-
-Gui, Add, Button, default y75 x10, Slot_7
-Gui, Add, Button, default y75 x65, Slot_8
-Gui, Add, Button, default y75 x120, Slot_9
-Gui, Add, Button, default y75 x175, Slot_10
-Gui, Add, Button, default y75 x230, Slot_11
-Gui, Add, Button, default y75 x285, Slot_12
-Gui, Add, Button, default y100 x350, Craft_String
 
 Gui, Add, Text, y100 x10, BackPack Size:
 Gui, Add, Button, default y125 x10, Small
 Gui, Add, Button, default y125 x65, Medium
-Gui, Add, Button, default y125 x120, Large
-Gui, Add, Button, default y125 x170, Greater
 
 Gui, Add, Text, y150 x10, Enderchest Size:
-Gui, Add, Button, default y175 x10, Lvl1
-Gui, Add, Button, default y175 x65, Lvl2
-Gui, Add, Button, default y175 x110, Lvl3
-
-Gui, Add, Text, y200 x10, Auto Crafter Speed:
-Gui, Add, Button, default y225 x10, Ultra Fast
-Gui, Add, Button, default y225 x80, Fast
-Gui, Add, Button, default y225 x120, Normal
-Gui, Add, Button, default y225 x170, Slow
+Gui, Add, Button, default y175 x10, eSmall
+Gui, Add, Button, default y175 x65, eMedium
 
 Gui, Tab  
 Gui, Show
@@ -203,108 +176,6 @@ if !slot_5
     x := 123
     return
 
-ButtonSlot_6:
-slot_6 := !slot_6
-if slot_6
-   msgbox, Slot 6 Selected!
-      x := 710 
-  y := 235
-    return
-    
-if !slot_6
-    msgbox, Slot 6 Unselected!
-    x := 123
-    return
-
-ButtonSlot_7:
-slot_7 := !slot_7
-if slot_7
-   msgbox, Slot 7 Selected!
-      x := 750 
-  y := 235
-    return
-    
-if !slot_7
-    msgbox, Slot 7 Unselected!
-    x := 123
-    return
-
-ButtonSlot_8:
-slot_8 := !slot_8
-if slot_8
-   msgbox, Slot 8 Selected!
-      x := 530 
-  y := 270
-    return
-    
-if !slot_8
-    msgbox, Slot 8 Unselected!
-    x := 123
-    return
-
-ButtonSlot_9:
-slot_9 := !slot_9
-if slot_9
-   msgbox, Slot 9 Selected!
-      x := 565 
-  y := 270
-    return
-    
-if !slot_9
-    msgbox, Slot 9 Unselected!
-    x := 123
-    return
-
-ButtonSlot_10:
-slot_10 := !slot_10
-if slot_10
-   msgbox, Slot 10 Selected!
-      x := 605 
-  y := 270
-    return
-    
-if !slot_10
-    msgbox, Slot 10 Unselected!
-    x := 123
-    return
-
-ButtonSlot_11:
-slot_11 := !slot_11
-if slot_11
-   msgbox, Slot 11 Selected!
-      x := 640 
-  y := 270
-    return
-    
-if !slot_11
-    msgbox, Slot 11 Unselected!
-    x := 123
-    return
-
-ButtonSlot_12:
-slot_12 := !slot_12
-if slot_12
-   msgbox, Slot 12 Selected!
-      x := 675 
-  y := 270
-    return
-    
-if !slot_12
-    msgbox, Slot 12 Unselected!
-    x := 123
-    return
-
-ButtonCraft_String:
-string := !string
-if string
-   msgbox, Craft String Selected!
-   crafting_string := True
-    return
-    
-if !string
-    msgbox, Craft String Unselected!
-    crafting_string := False
-    return
 
 ;=============================================================================================================================================================
 ;                                   BACKPACK SIZE CONFIG V  
@@ -367,47 +238,36 @@ if !large
     return
 
 
-Buttonlvl1:
-lvl1 := !lvl1
-if lvl1
-   msgbox, lvl1 Selected!
+ButtoneSmall:
+esmall := !esmall
+if esmall
+   msgbox, Small Selected!
    bx:= 500
   by := 385
   enderchest := True
     return
-if !lvl1
-    msgbox, lvl1 Unselected!
+if !esmall
+    msgbox, Small Unselected!
     bx := 123
     enderchest := False
     return
 
-Buttonlvl2:
-lvl2 := !lvl2
-if lvl2
-   msgbox, lvl2 Selected!
+ButtoneMedium:
+emedium := !emedium
+if emedium
+   msgbox, Medium Selected!
    bx:= 500
   by := 425
   enderchest := True
     return
-if !lvl2
-    msgbox, lvl2 Unselected!
+if !emedium
+    msgbox, Medium Unselected!
     bx := 123
     enderchest := False
     return
 
-Buttonlvl3:
-lvl3 := !lvl3
-if lvl3
-   msgbox, lvl3 Selected!
-   bx:= 500
-  by := 445
-  enderchest := True
-    return
-if !lvl3
-    msgbox, lvl3 Unselected!
-    bx := 123
-    enderchest := False
-    return
+7::
+msgbox, "%x%"
 
 
 ;=================================================================================================================================================
@@ -637,133 +497,13 @@ MouseClick,Right
 Sleep, 250
 MouseMove, 715, 274, Minecraft ; Stack of 64
 Sleep, 250
-Loop 50 {
+Loop 55 {
 
 	MouseClick,Left
-	Sleep 25
+	Sleep 75
 }
 Send, Esc
 ;                          CRAFTING V
-if(crafting_string)
-{
-Sleep, 250
-send, t
-sleep 200
- send, /viewcraftingtable
- Sleep, 200
- send {enter}
-Sleep, 150
-Send {LShift Down}
-Sleep 50
-MouseMove, 495, 445, Minecraft ; First slot
-MouseClick, left
-Sleep %speed%
-MouseMove, 535, 445, Minecraft ; second slot
-MouseClick, left
-Sleep %speed%
-MouseMove, 565, 445, Minecraft ; third slot
-Mouseclick, left
-sleep %speed%
-Mousemove, 605, 445, Minecraft ; fourth slot
-MouseClick, left
-Sleep %speed%
-MouseMove, 635, 445, Minecraft ; fifth slot
-Mouseclick, left
-Sleep %speed%
-MouseMove, 675, 445, Minecraft ; sixth slot
-Mouseclick, left
-Sleep %speed%
-MouseMove, 709, 274, Minecraft ; Crafted item
-sleep 100
-MouseClick, left
-Sleep %speed%
-MouseMove, 715, 445, Minecraft ; 7th slot
-Mouseclick, left
-Sleep %speed%
-MouseMove, 745, 445, Minecraft ; 8th slot
-Mouseclick, left
-Sleep %speed%
-MouseMove, 785, 445, Minecraft ; 9th slot
-Mouseclick, left
-Sleep %speed%
-MouseMove, 495, 475 Minecraft ; 10th slot
-Mouseclick, left
-Sleep %speed%
-MouseMove, 535, 475, Minecraft ; 11th
-MouseClick, left
-Sleep %speed%
-MouseMove, 565, 475, Minecraft ; 12th
-Mouseclick, left
-sleep %speed%
-MouseMove, 709, 274, Minecraft ; Crafted item
-Mouseclick, left
-Sleep 100
-Mousemove, 605, 475, Minecraft ; 13th
-MouseClick, left
-Sleep %speed%
-MouseMove, 635, 475, Minecraft ; 14th
-Mouseclick, left
-Sleep %speed%
-MouseMove, 675, 475, Minecraft ; 15th
-Mouseclick, left
-Sleep %speed%
-Sleep %speed%
-MouseMove, 715, 475, Minecraft ; 16th
-Mouseclick, left
-Sleep %speed%
-MouseMove, 745, 475, Minecraft ; 17th
-Mouseclick, left
-Sleep %speed%
-MouseMove, 785, 475, Minecraft ; 18th
-Mouseclick, left
-Sleep %speed%
-MouseMove, 709, 274, Minecraft ; Crafted item
-sleep 150
-MouseClick, left
-MouseMove, 495, 515, Minecraft ; 19th
-MouseClick, left
-Sleep %speed%
-MouseMove, 535, 515, Minecraft ; 20th
-MouseClick, left
-Sleep %speed%
-MouseMove, 565, 515, Minecraft ; 21st
-Mouseclick, left
-sleep %speed%
-Mousemove, 605, 515, Minecraft ; 22nd
-MouseClick, left
-Sleep %speed%
-MouseMove, 635, 515, Minecraft ; 23rd
-Mouseclick, left
-Sleep %speed%
-MouseMove, 675, 515, Minecraft ; 24th
-Mouseclick, left
-Sleep %speed%
-MouseMove, 709, 274, Minecraft ; Crafted item
-sleep 150
-MouseClick, left
-MouseMove, 715, 515, Minecraft ; 25th
-Mouseclick, left
-Sleep %speed%
-MouseMove, 745, 515, Minecraft ; 26th
-Mouseclick, left
-Sleep %speed%
-MouseMove, 785, 515, Minecraft ; 27th
-Mouseclick, left
-Sleep %speed%
-MouseMove, 495, 555, Minecraft ; Hotbar 1
-MouseClick,Left
-Sleep %speed%
-MouseMove, 531, 555, Minecraft ; Hotbar 2
-MouseClick,Left
-Sleep %speed%
-MouseMove, 567, 555, Minecraft ; Hotbar 3
-MouseClick,Left
-Sleep %speed%
-MouseMove, 709, 274, Minecraft ; Crafted item
-sleep 150
-MouseClick, left
-}else
-{
 Sleep, 250
 send, t
 sleep 200
@@ -789,7 +529,7 @@ MouseMove, 635, 445, Minecraft ; fifth slot
 Mouseclick, left
 Sleep %speed%
 MouseMove, 709, 274, Minecraft ; Crafted item
-sleep 100
+sleep %speed%
 MouseClick, left
 Sleep %speed%
 MouseMove, 675, 445, Minecraft ; sixth slot
@@ -809,7 +549,7 @@ Mouseclick, left
 Sleep %speed%
 MouseMove, 709, 274, Minecraft ; Crafted item
 Mouseclick, left
-Sleep 100
+Sleep %speed%
 MouseMove, 535, 475, Minecraft ; 11th
 MouseClick, left
 Sleep %speed%
@@ -826,7 +566,7 @@ MouseMove, 675, 475, Minecraft ; 15th
 Mouseclick, left
 Sleep %speed%
 MouseMove, 709, 274, Minecraft ; Crafted item
-sleep 150
+sleep %speed%
 MouseClick, left
 Sleep %speed%
 MouseMove, 715, 475, Minecraft ; 16th
@@ -845,7 +585,7 @@ MouseMove, 535, 515, Minecraft ; 20th
 MouseClick, left
 Sleep %speed%
 MouseMove, 709, 274, Minecraft ; Crafted item
-sleep 150
+sleep %speed%
 MouseClick, left
 Sleep %speed%
 MouseMove, 565, 515, Minecraft ; 21st
@@ -864,7 +604,7 @@ MouseMove, 715, 515, Minecraft ; 25th
 Mouseclick, left
 Sleep %speed%
 MouseMove, 709, 274, Minecraft ; Crafted item
-sleep 150
+sleep %speed%
 MouseClick, left
 Sleep %speed%
 Mouseclick, left
@@ -885,9 +625,8 @@ MouseMove, 567, 555, Minecraft ; Hotbar 3
 MouseClick,Left
 Sleep %speed%
 MouseMove, 709, 274, Minecraft ; Crafted item
-sleep 150
+sleep %speed%
 MouseClick, left
-}
 ;                                       STORING V
 sleep 200
 Send, Esc
